@@ -1,0 +1,187 @@
+v-li<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoZapas - Contáctanos</title>
+    <link rel="stylesheet" href="css/styles4-contact.css"> 
+    <link rel="stylesheet" href="css/styles5-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <script src="js/script-login.js"></script>
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-logo">
+            <div class="texto-imagen">
+                <h1>GoZapas</h1>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="menu-icon" id="menu-icon">
+                ☰
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactos.html">Contáctanos</a></li>
+               
+                <li id="login-item"><a href="login.html">Login</a></li>
+                <li id="user-name" class="hidden"></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="js/script.js"></script>
+
+    <!-- Sección de Contacto -->
+    <section id="contactanos">
+        <div class="container">
+            <!-- Información de contacto -->
+            <div class="box-info">
+                <h1>CONTÁCTATE CON <br>NOSOTROS</h1>
+    
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+(01) 234-5678</p>
+                </div>
+    
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Go_Zapas_2025@hotmail.com</p>
+                </div>
+    
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>30 Grant Ave, San Francisco, PE 94108-5834</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-form"></i>
+                    <p><a href="#" id="mostrarFormulario" class="btn-formulario">Llenar formulario</a></p>
+                </div>
+            </div>
+
+            <!-- Botones de redes sociales debajo del cuadro -->
+            <div class="social-buttons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventana flotante para el formulario -->
+<div id="ventanaFormulario" class="ventana-flotante">
+    <div class="contenido-flotante">
+        <span id="cerrarFormulario" class="cerrar">&times;</span>
+        <h2>Contáctanos</h2>
+        <form class="formulario-contacto" action="/enviar" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required onchange="validarCambio(this)">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required onchange="validarCambio(this)">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required onchange="validarCambio(this)"></textarea>
+            <button type="submit" onclick="return enviarFormulario()">Enviar</button>
+        </form>
+    </div>
+</div> 
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contactos.html">Contáctanos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: Go_Zapas_2025@hotmail.com</p>
+                <p>Teléfono: (01) 234-5678</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Derechos reservados de Go Zapas</p>
+        </div>
+    </footer>
+
+<!-- Scripts -->
+<script>
+    document.getElementById('mostrarFormulario').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('ventanaFormulario').style.display = 'flex';
+});
+
+document.getElementById('cerrarFormulario').addEventListener('click', function () {
+    document.getElementById('ventanaFormulario').style.display = 'none';
+});
+
+window.addEventListener('click', function (e) {
+    if (e.target.id === 'ventanaFormulario') {
+        document.getElementById('ventanaFormulario').style.display = 'none';
+    }
+});
+
+function enviarFormulario() {
+    var nombre = document.getElementById('nombre').value;
+    var email = document.getElementById('email').value;
+    var mensaje = document.getElementById('mensaje').value;
+
+    if (!nombre || !email || !mensaje) {
+        alert("Por favor, llena todos los campos del formulario.");
+        return false;
+    }
+
+    if (!email.includes('@')) {
+        alert("Por favor, introduce una dirección de correo válida con '@'.");
+        return false;
+    }
+
+    /*alert("Gracias por contactarnos, tu mensaje ha sido recibido.");*/
+
+
+
+    var continuar = confirm("¿Estás seguro de que deseas enviar el formulario?");
+    if (!continuar) {
+        return false;
+    }
+
+    // Cierra el modal
+    document.getElementById('ventanaFormulario').style.display = 'none';
+
+    alert("Gracias por contactarnos, tu mensaje ha sido recibido.");
+    return false;
+}
+</script>
+<script src="js/script2.js"></script>
+</body>
+
+<!--
+Prompt: Se utiliza prompt("¿Cómo te llamas?").
+Confirm: Se utiliza confirm("¿Estás seguro de que deseas enviar el formulario?").
+Alert: Se utilizan varias instancias de alert().
+Manipulación del DOM: Se manipulan elementos del DOM con document.getElementById, style.display, innerHTML, etc.
+-->
+</html>

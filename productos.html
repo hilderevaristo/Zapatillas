@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoZapas - Productos</title>
+    <link rel="stylesheet" href="css/styles2-products.css">
+    <link rel="stylesheet" href="css/styles6-chatbot.css">
+    <script src="js/script-login.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <div class="texto-imagen">
+                <h1>GoZapas</h1>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="menu-icon" id="menu-icon">
+                ☰
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactos.html">Contáctanos</a></li>
+                <li id="login-item"><a href="login.html">Login</a></li>
+                <li id="user-name" class="hidden"></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <section id="principal" class="content-principal">
+            <div class="content-pal">
+                <h1>Nuestros productos</h1>
+                <p>GoZapas tiene las mejores marcas del mercado.</p>
+            </div>
+            <section class="menu-zapatillas contenedo">
+                <h2 class="texto-zapatillas">Todos los productos</h2>
+                <div class="content-button">
+                    <button class="btn-adidas">Adidas</button>
+                    <button class="btn-nike">Nike</button>
+                    <button class="btn-puma">Puma</button>
+                </div>
+                <div class="zapatillas">
+                    <div class="content-zapatillas">
+                        <div class="zapatilla card-item" data-marca="adidas">
+                            <img src="img/adidas/adidas campus.jpg" alt="Adidas Campus" class="z-nov">
+                            <div class="cap">
+                                <h3>Adidas Campus</h3>
+                                <p>Precio: S/339.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-campus">Cantidad:</label>
+                                    <input type="number" id="cantidad-campus" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Adidas Campus" data-precio="339">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Adidas Campus" data-precio="339">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="adidas">
+                            <img src="img/adidas/adidas forum drop.jpg" alt="Adidas Forum Drop" class="h-nov">
+                            <div class="cap">
+                                <h3>Adidas Forum Drop</h3>
+                                <p><span class="precio-ant">S/399.00</span><span class="precio">S/319.00</span></p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-forum-drop">Cantidad:</label>
+                                    <input type="number" id="cantidad-forum-drop" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Adidas Forum Drop" data-precio="319">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Adidas Forum Drop" data-precio="319">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="adidas">
+                            <img src="img/adidas/adidas runfalcon.jpg" alt="Adidas Runfalcon" class="h-nov">
+                            <div class="cap">
+                                <h3>Adidas Runfalcon</h3>
+                                <p>Precio: S/199.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-runfalcon">Cantidad:</label>
+                                    <input type="number" id="cantidad-runfalcon" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Adidas Runfalcon" data-precio="199">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Adidas Runfalcon" data-precio="199">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="adidas">
+                            <img src="img/adidas/adidas samba.webp" alt="Adidas Samba" class="h-nov">
+                            <div class="cap">
+                                <h3>Adidas Samba</h3>
+                                <p>Precio: S/359.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-samba">Cantidad:</label>
+                                    <input type="number" id="cantidad-samba" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Adidas Samba" data-precio="359">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Adidas Samba" data-precio="359">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="adidas">
+                            <img src="img/adidas/Zapatillas_Tyshawn2.jpg" alt="Zapatilla Tyshawn" class="h-nov">
+                            <div class="cap">
+                                <h3>Zapatilla Tyshawn</h3>
+                                <p>Precio: S/244.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-tyshawn">Cantidad:</label>
+                                    <input type="number" id="cantidad-tyshawn" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Zapatilla Tyshawn" data-precio="244">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Zapatilla Tyshawn" data-precio="244">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="nike">
+                            <img src="img/nike/air force 1 panda.webp" alt="Nike Air Force 1 Panda" class="h-nov">
+                            <div class="cap">
+                                <h3>Nike Air Force 1 Panda</h3>
+                                <p><span class="precio-ant">S/480.00</span><span class="precio">S/409.00</span></p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-air-force-1">Cantidad:</label>
+                                    <input type="number" id="cantidad-air-force-1" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Nike Air Force 1 Panda" data-precio="409">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Nike Air Force 1 Panda" data-precio="409">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="nike">
+                            <img src="img/nike/nike air max 97-2.jpg" alt="Nike Air Max 97" class="h-nov">
+                            <div class="cap">
+                                <h3>Nike Air Max 97</h3>
+                                <p>Precio: S/989.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-air-max-97">Cantidad:</label>
+                                    <input type="number" id="cantidad-air-max-97" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Nike Air Max 97" data-precio="989">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Nike Air Max 97" data-precio="989">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="nike">
+                            <img src="img/nike/nike blazer mid 77-2.jpg" alt="Nike Blazer Mid 77" class="h-nov">
+                            <div class="cap">
+                                <h3>Nike Blazer Mid 77</h3>
+                                <p>Precio: S/429.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-blazer-mid-77">Cantidad:</label>
+                                    <input type="number" id="cantidad-blazer-mid-77" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Nike Blazer Mid 77" data-precio="429">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Nike Blazer Mid 77" data-precio="429">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="nike">
+                            <img src="img/nike/nike dunk panda.jpg" alt="Nike Dunk Panda" class="h-nov">
+                            <div class="cap">
+                                <h3>Nike Dunk Panda</h3>
+                                <p><span class="precio-ant">S/480.00</span><span class="precio">S/409.00</span></p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-dunk-panda">Cantidad:</label>
+                                    <input type="number" id="cantidad-dunk-panda" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Nike Dunk Panda" data-precio="409">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Nike Dunk Panda" data-precio="409">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="nike">
+                            <img src="img/nike/nike gamma force.jpg" alt="Nike Gamma Force" class="h-nov">
+                            <div class="cap">
+                                <h3>Nike Gamma Force</h3>
+                                <p><span class="precio-ant">S/379.00</span><span class="precio">S/329.00</span></p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-gamma-force">Cantidad:</label>
+                                    <input type="number" id="cantidad-gamma-force" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Nike Gamma Force" data-precio="329">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Nike Gamma Force" data-precio="329">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="nike">
+                            <img src="img/nike/nike revolution 7.webp" alt="Nike Revolution 7" class="h-nov">
+                            <div class="cap">
+                                <h3>Nike Revolution 7</h3>
+                                <p>Precio: S/219.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-revolution-7">Cantidad:</label>
+                                    <input type="number" id="cantidad-revolution-7" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Nike Revolution 7" data-precio="219">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Nike Revolution 7" data-precio="219">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="puma">
+                            <img src="img/puma/puma caven 2.0.jpg" alt="Puma Caven 2.0" class="h-nov">
+                            <div class="cap">
+                                <h3>Puma Caven 2.0</h3>
+                                <p>Precio: S/229.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-caven-2-0">Cantidad:</label>
+                                    <input type="number" id="cantidad-caven-2-0" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Puma Caven 2.0" data-precio="229">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Puma Caven 2.0" data-precio="229">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="puma">
+                            <img src="img/puma/puma r78.webp" alt="Puma R78" class="h-nov">
+                            <div class="cap">
+                                <h3>Puma R78</h3>
+                                <p>Precio: S/209.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-r78">Cantidad:</label>
+                                    <input type="number" id="cantidad-r78" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Puma R78" data-precio="209">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Puma R78" data-precio="209">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="puma">
+                            <img src="img/puma/puma speedcat.jpg" alt="Puma Speedcat" class="h-nov">
+                            <div class="cap">
+                                <h3>Puma Speedcat</h3>
+                                <p>Precio: S/389.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-speedcat">Cantidad:</label>
+                                    <input type="number" id="cantidad-speedcat" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Puma Speedcat" data-precio="389">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Puma Speedcat" data-precio="389">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="puma">
+                            <img src="img/puma/puma suade xl.avif" alt="Puma Suede XL" class="h-nov">
+                            <div class="cap">
+                                <h3>Puma Suede XL</h3>
+                                <p>Precio: S/379.00</p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-suede-xl">Cantidad:</label>
+                                    <input type="number" id="cantidad-suede-xl" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Puma Suede XL" data-precio="379">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Puma Suede XL" data-precio="379">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zapatilla card-item" data-marca="puma">
+                            <img src="img/puma/pumas smash.jpg" alt="Puma Smash" class="h-nov">
+                            <div class="cap">
+                                <h3>Puma Smash</h3>
+                                <p><span class="precio-ant">S/229.00</span><span class="precio">S/169.00</span></p>
+                                <div class="quantity-selector">
+                                    <label for="cantidad-smash">Cantidad:</label>
+                                    <input type="number" id="cantidad-smash" name="cantidad" min="1" value="1">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn-nov btn" data-producto="Puma Smash" data-precio="169">Comprar ya</button>
+                                    <button class="btn-add-to-cart btn" data-producto="Puma Smash" data-precio="169">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </section>
+        </section>
+        <!-- Ícono del carrito -->
+    <div id="cart-icon">
+        🛒<span id="cart-count">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="modal modal-carrito">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Carrito de compras</h3>
+            
+            <!-- Contenedor de artículos en el carrito -->
+            <ul id="cart-items">
+                <!-- Los artículos se agregarán dinámicamente aquí -->
+            </ul>
+    
+            <!-- Total del carrito -->
+            <h4>Total neto: S/<span id="cart-total">0.00</span></h4>
+    
+            <!-- Botón para vaciar el carrito -->
+            <button id="empty-cart" class="btn-empty">Vaciar carrito</button>
+            <button id="buy-cart" class="btn-empty">Comprar</button>
+        </div>
+    </div>
+    <button id="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-rounded">close</span>
+    </button>
+
+    <div class="chatbot-popup">
+        <div class="chat-header">
+            <div class="header-info">
+                <svg class="chatbot-logo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"></path>
+                </svg>
+                <h2 class="logo-text">Chatbot</h2>
+            </div>
+            <button id="close-chatbot" class="material-symbols-rounded">keyboard_arrow_down</button>
+        </div>
+
+        <div class="chat-body">
+            <div class="message bot-message">
+                <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                    <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"></path>
+                </svg>
+                <div class="message-text">Hola!👋 <br /> ¿Cómo puedo ayudarte hoy?</div>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea aria-label="Escribe tu mensaje" placeholder="Message..." class="message-input" required></textarea>
+                <div class="chat-controls">
+                    <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contactos.html">Contáctanos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: gozapas@hotmail.com</p>
+                <p>Teléfono: (01) 234-5678</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Derechos reservados de GoZapas</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/script-botones.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

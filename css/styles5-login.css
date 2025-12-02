@@ -1,0 +1,563 @@
+/* Enlazar el CSS con la librería de iconos de Font-Awesone 6.6 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* Enlazar el CSS con fuentes externas de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --amarillo: #FFFDD0;
+    --azul-oscuro: #005A8D;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+
+    /* Variables para las tipografias */
+    --fuente1: "Open Sans", sans-serif;
+    --fuente2: "Poiret One", sans-serif;
+	--fuente3: "Roboto", sans-serif;
+}
+
+/*Afecta a todos los elementos de la pagina HTML*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--negro);
+    color: var(--negro);
+    font-family: var(--fuente1);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /*background-color: black;*/
+    border-bottom: 2px solid var(--amarillo);
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+}
+
+.texto-imagen h1{
+    font-size: 30px;
+    color: var(--blanco);
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Alineación vertical perfecta */
+    gap: 40px;           /* Más espacio entre elementos para que respiren */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative; /* Necesario para la animación del subrayado */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 16px;          /* Un poco más pequeño pero más limpio */
+    font-weight: 600;         /* Semibold se ve mejor que Bold total */
+    text-transform: uppercase;/* Las mayúsculas dan un toque "premium" */
+    letter-spacing: 1px;      /* Espacio entre letras para elegancia */
+    padding: 10px 0;          /* Padding vertical, sin horizontal para el efecto */
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover: Subrayado animado que crece */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;              /* Empieza invisible */
+    height: 2px;            /* Grosor de la línea */
+    background-color: var(--amarillo); /* Tu variable de color */
+    transition: width 0.3s ease; /* Animación suave */
+}
+
+.nav-links li a:hover {
+    color: var(--amarillo); /* El texto cambia de color */
+}
+
+.nav-links li a:hover::after {
+    width: 100%;            /* La línea crece al 100% */
+}
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        
+        /* Posición */
+        position: absolute;
+        top: 100%;    /* Se pega justo debajo del header */
+        right: 20px;  /* Dejamos un margen a la derecha para que no pegue al borde */
+        
+        /* Tamaño */
+        width: 250px; /* Un ancho fijo: más grande que el original, pero no toda la pantalla */
+        
+        /* Estilo Visual de la caja */
+        background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro semitransparente */
+        border: 1px solid var(--amarillo);     /* Borde fino y elegante */
+        border-radius: 8px;                    /* Esquinas redondeadas */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Sombra fuerte para que flote */
+        padding: 10px 0;
+    }
+
+    /* Clase para mostrar el menú */
+    .nav-links.active {
+        display: flex;
+        z-index: 2000;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center; /* Texto centrado dentro de la cajita */
+        padding: 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;    /* Altura cómoda para el dedo */
+        font-size: 16px;
+        color: var(--blanco);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Separador muy sutil */
+    }
+
+    /* Efecto al tocar en celular */
+    .nav-links li a:hover {
+        background-color: var(--amarillo);
+        color: var(--negro);
+        border-radius: 0; /* Quitamos radio interno para que llene la linea */
+    }
+    
+    /* Ocultar la animación de subrayado de escritorio en móvil */
+    .nav-links li a::after {
+        display: none;
+    }
+}
+
+main{
+    background-image: url(../img/delicias/fondo-negro.jpg); /* Reemplaza esta ruta con la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+    background-position: center; /* Centra la imagen en la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 50px 0; /* Añade un poco de espacio vertical */
+}
+/* Estilos específicos para el login */
+.login-container {
+    /*background-color: var(--amarillo);*/
+    background-image: linear-gradient(to top, #1e251f 0%, #3d4e23 50%, #65dbcf 100%);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--azul-oscuro);
+    font-family: var(--fuente2);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--negro);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--negro);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/*FOOTER*/
+
+footer{
+    color: var(--blanco);
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1350px;
+    margin: auto;
+}
+
+.footer-section{
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4{
+    font-family: var(--fuente2);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--amarillo);
+    display: inline-block;
+}
+
+.footer-section p{
+    font-family: var(--fuente3);
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li{
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+.footer-section ul li:hover{
+    transform: scale(1.2);
+}
+
+.footer-section ul li a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover{
+    color: var(--amarillo);
+}
+
+.social-icons a{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: var(--blanco);
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+.social-icons a:hover{
+    color: var(--amarillo);
+    transform: scale(1.2);
+}
+
+.footer-bottom{
+    margin-top: 20px;
+    border-top: 1px solid var(--amarillo);
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+/*CARRITO*/
+#cart-icon {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    /*background-color: #f1a23a;*/
+    background-color: var(--negro);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 500;
+    transition: background-color 1s;
+}
+
+#cart-icon:hover {
+    background-color: #f21919;
+}
+
+#cart-count {
+    font-weight: bold;
+}
+
+/* Modal del carrito */
+.modal-carrito {
+    display: none; /* Inicialmente está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 10% auto; /* Centrar verticalmente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ajustar ancho */
+    max-width: 500px; /* Ancho máximo */
+    text-align: center;
+}
+
+/* Contenido del modal del carrito */
+.modal-carrito .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Ancho máximo */
+    width: 90%;
+    display: flex;
+    flex-direction: column; /* Apilar los elementos verticalmente */
+    gap: 20px;
+    justify-content: flex-start; /* Alineación de los elementos hacia arriba */
+    position: relative; /* Para la posición del botón de cerrar */
+}
+
+/* Botón de cerrar del modal del carrito */
+.modal-carrito .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Estilo de los elementos dentro del cuerpo del modal */
+.modal-carrito .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+/* Contenedor de los artículos del carrito */
+#cart-items {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-column.name {
+    text-align: left;
+}
+
+.cart-column.price, .cart-column.total {
+    text-align: center;
+}
+
+.cart-column.quantity input {
+    width: 50px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.cart-column.actions {
+    text-align: center;
+}
+
+/* Botón de eliminar del carrito */
+.cart-column button {
+    background-color: #ff4d4d; /* Rojo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-column button:hover {
+    background-color: #e60000; /* Rojo más oscuro */
+}
+
+/* Total del carrito */
+#cart-total {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Botón para vaciar carrito */
+#empty-cart {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#empty-cart:hover {
+    background-color: #e60000;
+}
+
+#buy-cart{
+    background-color: #6ffc3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#buy-cart:hover {
+    background-color: #54f81d;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-carrito .modal-content {
+        padding: 15px;
+    }
+
+    .modal-carrito .modal-body {
+        font-size: 14px;
+    }
+
+    .modal-carrito #cart-items li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .modal-carrito #cart-total {
+        font-size: 18px;
+    }
+
+    .modal-carrito button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Ajuste de columnas en el carrito */
+    .cart-item {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--negro); /* o el color que uses */
+    z-index: 1000; /* para que quede encima de todo */
+}
+
+/* Ajusta el contenido principal para que no se tape con el header */
+main {
+    margin-top: 100px; /* cambia según la altura de tu header */
+}
+.hidden {
+  display: none;
+}
+
+#user-name {
+  color: var(--amarillo);
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.welcome-message {
+  color: var(--azul-oscuro);
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: bold;
+  display: none;
+}
